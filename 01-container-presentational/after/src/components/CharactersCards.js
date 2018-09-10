@@ -1,5 +1,5 @@
 import React from 'react';
-import CharacterCard from './CharacterCard';
+import CharacterCard from './CharacterCard/CharacterCard';
 
 const CharactersCards = ({ characters }) =>
   characters.map(({ name, image, species, gender }) => (

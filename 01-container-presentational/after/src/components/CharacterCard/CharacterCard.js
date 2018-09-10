@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProfileRow from './ProfileRow';
+import ProfileRow from './ProfileRow/ProfileRow';
 
 const UNKNOWN_AVATAR_URL = `${
   process.env.PUBLIC_URL
