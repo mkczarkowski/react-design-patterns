@@ -4,15 +4,29 @@
   Author: Kunal Sarkar
   Adjustments: Marcin Czarkowski
 */
+body,
+#root,
+.container,
+.async-status-wrapper,
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
   background-color: #091214;
 }
 
-.container {
+.async-status-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: white;
+  font-size: 1.6em;
 }
 
 .id-card-wrapper {
@@ -20,7 +34,6 @@ body {
   justify-content: center;
   margin: 1.5em;
   width: 100%;
-  height: 12%;
 }
 
 .id-card {

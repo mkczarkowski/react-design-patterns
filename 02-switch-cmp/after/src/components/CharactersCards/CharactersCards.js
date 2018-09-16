@@ -1,11 +1,19 @@
 import React from 'react';
+
 import CharacterCard from './CharacterCard/CharacterCard';
 import ProfileRow from './CharacterCard/ProfileRow/ProfileRow';
 import Avatar from './CharacterCard/ProfileRow/Avatar';
 import Description from './CharacterCard/ProfileRow/Description';
+import FetchError from '../UI/FetchError/FetchError';
+import LoadingSpinner from '../UI/LoadingSpinner/LoadingSpinner';
 
-const CharactersCards = ({ characters }) =>
-  characters.map(({ name, image, species, gender }) => (
+const CharactersCards = ({ characters, loading, error }) => {
+  if (error) {
+    return <FetchError />;
+  } else if (loading) {
+    return <LoadingSpinner />;
+  }
+  return characters.map(({ name, image, species, gender }) => (
     <CharacterCard key={name}>
       <ProfileRow>
         <Avatar image={image} name={name} />
@@ -13,5 +21,6 @@ const CharactersCards = ({ characters }) =>
       </ProfileRow>
     </CharacterCard>
   ));
+};
 
 export default CharactersCards;
