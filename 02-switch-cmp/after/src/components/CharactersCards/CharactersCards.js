@@ -4,8 +4,8 @@ import CharacterCard from './CharacterCard/CharacterCard';
 import ProfileRow from './CharacterCard/ProfileRow/ProfileRow';
 import Avatar from './CharacterCard/ProfileRow/Avatar';
 import Description from './CharacterCard/ProfileRow/Description';
-import FetchError from '../UI/FetchError/FetchError';
-import LoadingSpinner from '../UI/LoadingSpinner/LoadingSpinner';
+import FetchError from '../shared/FetchError/FetchError';
+import LoadingSpinner from '../shared/LoadingSpinner/LoadingSpinner';
 
 const CharactersCards = ({ characters, loading, error }) => {
   if (error) {
