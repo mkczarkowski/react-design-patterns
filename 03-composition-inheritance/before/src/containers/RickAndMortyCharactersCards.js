@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import CharactersCards from '../components/CharactersCards/CharactersCards';
 
-const API_URL = 'https://rickandmortyapi.com/api/character/5442423';
+const API_URL = 'https://rickandmortyapi.com/api/character/';
 
 class RickAndMortyCharactersCards extends React.Component {
   state = {
