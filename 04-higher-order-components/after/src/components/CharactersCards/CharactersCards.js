@@ -1,14 +1,11 @@
 import React from 'react';
-import { compose } from 'recompose';
 
 import CharacterCard from './CharacterCard/CharacterCard';
 import ProfileRow from './CharacterCard/ProfileRow/ProfileRow';
 import Avatar from './CharacterCard/ProfileRow/Avatar';
 import DescriptionWithAutumnIcons from './CharacterCard/ProfileRow/Description/DescriptionWithAutumnIcons';
-import withLoading from '../shared/hoc/withLoading';
-import withHandleError from '../shared/hoc/withHandleError';
 
-const CharactersCards = ({ characters, loading, error }) => {
+const CharactersCards = ({ characters }) => {
   return characters.map(({ name, image, species, gender }) => (
     <CharacterCard key={name}>
       <ProfileRow>
@@ -23,7 +20,4 @@ const CharactersCards = ({ characters, loading, error }) => {
   ));
 };
 
-export default compose(
-  withLoading,
-  withHandleError,
-)(CharactersCards);
+export default CharactersCards;
