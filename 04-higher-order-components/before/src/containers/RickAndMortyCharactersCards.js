@@ -1,15 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { compose } from 'recompose';
-
 import CharactersCards from '../components/CharactersCards/CharactersCards';
-import withLoading from '../components/shared/hoc/withLoading';
-import withHandleError from '../components/shared/hoc/withHandleError';
-
-const CharactersCardsWithLoadingAndHandleError = compose(
-  withHandleError,
-  withLoading,
-)(CharactersCards);
 
 const API_URL = 'https://rickandmortyapi.com/api/character/';
 
@@ -37,7 +28,7 @@ class RickAndMortyCharactersCards extends React.Component {
     const { characters, loading, error } = this.state;
 
     return (
-      <CharactersCardsWithLoadingAndHandleError
+      <CharactersCards
         characters={characters}
         loading={loading}
         error={error}
