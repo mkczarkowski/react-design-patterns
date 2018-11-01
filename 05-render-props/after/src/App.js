@@ -6,7 +6,7 @@ import RickAndMortyCharacters from "./containers/RickAndMortyCharacters";
 import CharactersCards from "./components/CharactersCards/CharactersCards";
 import withLoading from "./components/shared/hoc/withLoading";
 import withHandleError from "./components/shared/hoc/withHandleError";
-import CharactersTable from "./components/CharactersTable";
+import CharactersTable from "./components/CharactersTable/CharactersTable";
 
 const CharactersCardsWithLoadingAndHandleError = compose(
   withHandleError,
@@ -19,12 +19,12 @@ function App() {
       <RickAndMortyCharacters
         render={({ characters, loading, error }) => (
           <React.Fragment>
+            <CharactersTable characters={characters}/>
             <CharactersCardsWithLoadingAndHandleError
               characters={characters}
               loading={loading}
               error={error}
             />
-            <CharactersTable characters={characters}/>
           </React.Fragment>
         )}
       />
